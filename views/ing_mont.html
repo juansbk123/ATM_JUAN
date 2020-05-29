@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #screen_box
+{
+    height: 230px;
+    width: 320px;
+    background-color: yellow;
+    float: left;
+    margin: 10px 0px 0px 0px;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 20px;
+    border-color: blue;
+
+}
+#p_iz{
+    color: red;
+float: left;
+font-size: 12px;
+margin-left: 0px;
+
+}
+
+#p_der{
+    color: red;
+width: 110px;
+float: left;
+font-size: 12px;
+margin-left: 180px;
+}
+
+.triangle_izq{
+width: 0;
+height: 0;
+border-top: 15px solid transparent;
+border-bottom: 15px solid transparent;
+border-right: 15px solid #000;
+}
+
+.triangle_der{
+width: 0;
+height: 0;
+border-top: 15px solid transparent;
+border-bottom: 15px solid transparent;
+border-left: 15px solid yellow;
+
+}
+#caja_2{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+}
+    </style>
+</head>
+<body>
+    <nav id="screen_box">
+        <h1 style="color: red;">MENU PRINCIPAL</h1>
+
+    <div id="caja_2">
+
+        <section class="triangle_d">
+            <div class="triangle_der"></div>
+            <div class="triangle_der"></div>
+            <div class="triangle_der"></div>
+            <div class="triangle_der"></div>
+        </section>
+
+        <section id="p_iz">
+            <P ></P>
+            <P ></P>
+            <P></P>
+        </section>    
+
+    
+        <section id="p_der">
+
+            <P>CONFIRMAR</P>
+            <P>CORREGIR</P>
+            <p>CANCELAR</p>
+        </section>   
+        <section class="triangle_i">
+            <div class="triangle_izq"></div>
+            <div class="triangle_izq"></div>
+            <div class="triangle_izq"></div>
+            <div class="triangle_izq"></div>
+        </section>
+    </div> 
+    </nav>
+</body>
+</html>

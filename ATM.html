@@ -13,15 +13,15 @@
 <fieldset id="total_box">
     <header id="header_box">
         <section id="button_felt">
-            <button class="lado"> <i id="arrow" class="fas fa-arrow-right colorcito" style="color:white;"></i></button>
-            <button class="lado"> <i id="arrow"class="fas fa-arrow-right colorcito" style="color:white;"></i></button>
-            <button class="lado"> <i id="arrow"class="fas fa-arrow-right colorcito" style="color:white;"></i></button>
-            <button class="lado"> <i id="arrow"class="fas fa-arrow-right colorcito" style="color:white;"></i></button>
+            <button class="lado"> <i id="arrow" class="fas fa-arrow-right colorcito" style="color:white;" onclick="retirar()"></i></button>
+            <button class="lado"> <i id="arrow1"class="fas fa-arrow-right colorcito" style="color:white;"  onclick="retirasoles()"></i></button>
+            <button class="lado"> <i id="arrow2"class="fas fa-arrow-right colorcito" style="color:white;"></i></button>
+            <button class="lado"> <i id="arrow3"class="fas fa-arrow-right colorcito" style="color:white;"></i></button>
 
 
         </section>
 
-        <nav id="screen_box">
+        <nav id="screen_box"  >
             <h1>!Bienvenido al banco!</h1>
             <p>Por favor digite su clave</p>
             <div id="pass"></div>
@@ -30,25 +30,288 @@
         </nav>
 
         <menu  id="menu" >
-            <a href="views/menu.html"  id="menu">MENU</a>
+            <!-- <a href="views/menu.html"  id="menu">MENU</a> -->
             <!-- <h1>!Bienvenido al Menu</h1>
             <p>Por favor digite su clave</p>
             <div id="pass"></div>
             <p type="password"class="err"  id="input"></p> -->
+
+            <style>
+                #screen1
+        {
+            height: 230px;
+            width: 320px;
+            background-color: yellow;
+            float: left;
+            margin: 10px 0px 0px 0px;
+            text-align: center;
+            padding-top: 10px;
+            border-radius: 20px;
+            border-color: blue;
+        
+        }
+        #p_iz{
+            color: red;
+        float: left;
+        font-size: 12px;
+        margin-left: 0px;
+        
+        }
+        
+        #p_der{
+            color: red;
+        width: 100px;
+        float: left;
+        font-size: 12px;
+        margin-left: 40px;
+        }
+        
+        .triangle_izq{
+        width: 0;
+        height: 0;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-right: 15px solid #000;
+        }
+        
+        .triangle_der{
+        width: 0;
+        height: 0;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 15px solid #000;
+        
+        }
+        #caja_2{
+            margin-top: 40px;
+            display: flex;
+            flex-direction: row;
+        }
+            </style>
+
+            <nav id="screen1"  style="display:none;">
+                <h1 style="color: red;">MENU PRINCIPAL</h1>
+        
+            <div id="caja_2">
+        
+                <section class="triangle_d">
+                    <div class="triangle_der"></div>
+                    <div class="triangle_der"></div>
+                    <div class="triangle_der"></div>
+                    <div class="triangle_der"></div>
+                </section>
+        
+                <section id="p_iz">
+                    <P style="padding :10px; ">RETIRO</P>
+                    <P style="padding :10px; ">CONSULTAS</P>
+                    <P >OPERACIONES</P>
+                </section>    
+        
+            
+                <section id="p_der">
+        
+                    <P style="padding-top :10px; ">TRASFERENCIAS</P>
+                    <P style="padding-top :10px; ">  ..........</P>
+                    <p style="padding-top :10px; ">UTLTIMOS MOVIMIENTOS</p>
+                </section>   
+                <section class="triangle_i">
+                    <div class="triangle_izq"></div>
+                    <div class="triangle_izq"></div>
+                    <div class="triangle_izq"></div>
+                    <div class="triangle_izq"></div>
+                </section>
+            </div> 
+            </nav>
+
+            <style>
+                #screen2
+        {
+            height: 230px;
+            width: 320px;
+            background-color: yellow;
+            float: left;
+            margin: 10px 0px 0px 0px;
+            text-align: center;
+            padding-top: 10px;
+            border-radius: 20px;
+            border-color: blue;
+        
+        }
+        #p_iz{
+            color: red;
+        float: left;
+        font-size: 12px;
+        margin-left: 0px;
+        
+        }
+        
+        #p_der{
+            color: red;
+        width: 110px;
+        float: left;
+        font-size: 12px;
+        margin-left: 100px;
+        /* background-color: aliceblue; */
+        }
+        
+        .triangle_izq{
+        width: 0;
+        height: 0;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-right: 15px solid #000;
+        }
+        
+        .triangle_der{
+        width: 0;
+        height: 0;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 15px solid #000;
+        
+        }
+        #caja_2{
+            margin-top: 40px;
+            display: flex;
+            flex-direction: row;
+        }
+            </style>
+
+            <nav id="screen2" style="display: none;">
+                <h1 style="color: red;">RETIRO</h1>
+        
+            <div id="caja_2">
+        
+                <section class="triangle_d">
+                    <div class="triangle_der"></div>
+                    <div class="triangle_der"></div>
+                    <div class="triangle_der"></div>
+                    <div class="triangle_der"></div>
+                </section>
+        
+                <section id="p_iz">
+                    <P style="padding-top: 40px;">RETIRO SOLES</P>
+                </section>    
+        
+            
+                <section id="p_der">
+        
+                    <P>RETIRO DOLARES</P><br><br><br>
+                    <p>CANCELAR</p>
+                </section>   
+                <section class="triangle_i">
+                    <div class="triangle_izq"></div>
+                    <div class="triangle_izq"></div>
+                    <div class="triangle_izq"></div>
+                    <div class="triangle_izq"></div>
+                </section>
+            </div> 
+            </nav>
+
+            <style>
+                #screen3
+        {
+            height: 230px;
+            width: 320px;
+            background-color: yellow;
+            float: left;
+            margin: 10px 0px 0px 0px;
+            text-align: center;
+            padding-top: 10px;
+            border-radius: 20px;
+            border-color: blue;
+        
+        }
+        #p_iz{
+            color: red;
+        float: left;
+        font-size: 12px;
+        margin-left: 0px;
+        
+        }
+        
+        #p_der{
+            color: red;
+        width: 110px;
+        float: left;
+        font-size: 12px;
+        margin-left: 150px;
+        /* background-color: aliceblue; */
+        }
+        
+        .triangle_izq{
+        width: 0;
+        height: 0;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-right: 15px solid #000;
+        }
+        
+        .triangle_der{
+        width: 0;
+        height: 0;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 15px solid #000;
+        
+        }
+        #caja_2{
+            margin-top: 40px;
+            display: flex;
+            flex-direction: row;
+        }
+            </style>
+
+            <nav id="screen3" style="display: none;" >
+                <h1 style="color: red;">RETIRO</h1>
+        
+            <div id="caja_2">
+        
+                <section class="triangle_d">
+                    <div class="triangle_der"></div>
+                    <div class="triangle_der"></div>
+                    <div class="triangle_der"></div>
+                    <div class="triangle_der"></div>
+                </section>
+        
+                <section id="p_iz">
+                    <P style="padding-top: 10px;">S/.20</P>
+                    <P style="padding-top: 20px;" >S/.150</P>
+                    <P style="padding-top: 50px;">S/.300</P>
+                </section>    
+        
+            
+                <section id="p_der">
+        
+                    <P>S/.100</P>
+                    <P>S/.200</P>
+                    <p>OTRAS CANTIDADES</p>
+                    <p>CANCELAR</p>
+                </section>   
+                <section class="triangle_i">
+                    <div class="triangle_izq"></div>
+                    <div class="triangle_izq"></div>
+                    <div class="triangle_izq"></div>
+                    <div class="triangle_izq"></div>
+                </section>
+            </div> 
+            </nav>
+
+
+
         </menu>
 
         <aside id="button_rigth">
 
-            <button class="lado"> <i id="arrow"class="fas fa-arrow-left colorcito" style="color:white;"></i></button>
-            <button class="lado"> <i id="arrow"class="fas fa-arrow-left colorcito" style="color:white;"></i></button>
-            <button class="lado"> <i id="arrow"class="fas fa-arrow-left colorcito" style="color:white;"></i></button>
-            <button class="lado"> <i id="arrow"class="fas fa-arrow-left colorcito" style="color:white;"></i></button>
+            <button class="lado"> <i id="arrow4"class="fas fa-arrow-left colorcito" style="color:white;"></i></button>
+            <button class="lado"> <i id="arrow5"class="fas fa-arrow-left colorcito" style="color:white;"></i></button>
+            <button class="lado"> <i id="arrow6"class="fas fa-arrow-left colorcito" style="color:white;"></i></button>
+            <button class="lado"> <i id="arrow7"class="fas fa-arrow-left colorcito" style="color:white;"></i></button>
 
         </aside>
         <!-- <input type="text" > -->
 
     </header>
-
 
 
     <main id="main_box">

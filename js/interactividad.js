@@ -80,9 +80,15 @@ function ok()
 {
      if(document.getElementById("pass").innerHTML=="123"){
          //SE MOTRARA EL MENU
+
+         document.getElementById("screen_box").style.display="none";
+         document.getElementById("screen1").style.display="block";
+
+
+
          var screenMenu=document.getElementById("menu");
          screenMenu.href;
-        document.getElementById("input").innerHTML="se debe mostrar el menu";
+         document.getElementById("input").innerHTML="se debe mostrar el menu";
      }
      else{document.getElementById("input").innerHTML="CONTRASEÑA INCORRECTA";}
 }
@@ -92,3 +98,28 @@ function clear(){
 }
 
 
+function clear()
+{
+    // document.getElementById("teclado1").style.display="block";
+    document.getElementById("pass").innerHTML="";
+    document.getElementById("input").innerHTML="";
+    document.getElementById("screen1").style.display="none";
+    document.getElementById("screen_box").style.display="block";
+    document.getElementById("screen2").style.display="none";
+
+}
+
+
+function retirar(){
+    document.getElementById("screen_box").style.display="none";
+    document.getElementById("screen1").style.display="none";
+    document.getElementById("screen3").style.display="block";
+    document.getElementById("screen2").style.display="none";
+} 
+
+function retirasoles(){
+    document.getElementById("screen_box").style.display="none";
+    document.getElementById("screen1").style.display="none";
+    document.getElementById("screen2").style.display="none";
+    document.getElementById("screen3").style.display="block";
+}

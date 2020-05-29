@@ -24,13 +24,47 @@
     background-color: gray;
     float: left;
     margin: 10px;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 #arrow{
 font-size: inherit;
-
 }
+
+#arrow1{
+    font-size: inherit;   
+}
+
+
+#arrow2{
+    font-size: inherit;   
+}
+
+
+#arrow3{
+    font-size: inherit;   
+}
+
+
+#arrow4{
+    font-size: inherit;   
+}
+
+
+#arrow5{
+    font-size: inherit;   
+}
+
+
+#arrow6{
+    font-size: inherit;   
+}
+
+
+#arrow7{
+    font-size: inherit;   
+}
+
 #screen_box
 {
     height: 230px;
@@ -60,7 +94,7 @@ font-size: inherit;
     float: left;
     margin: 10px;
     /*da un espacio entre */
-    padding-top: 100px;
+    padding-top: 80px;
    color: aliceblue;
 }
 
