@@ -86,6 +86,7 @@ function ok()
 
 
 
+
          var screenMenu=document.getElementById("menu");
          screenMenu.href;
          document.getElementById("input").innerHTML="se debe mostrar el menu";
@@ -103,23 +104,99 @@ function clear()
     // document.getElementById("teclado1").style.display="block";
     document.getElementById("pass").innerHTML="";
     document.getElementById("input").innerHTML="";
+
     document.getElementById("screen1").style.display="none";
-    document.getElementById("screen_box").style.display="block";
     document.getElementById("screen2").style.display="none";
+    document.getElementById("screen3").style.display="none";
+    document.getElementById("screen4").style.display="none";
+    document.getElementById("screen5").style.display="none";
+    document.getElementById("screen6").style.display="none";
+    document.getElementById("screen_box").style.display="block";
+
 
 }
 
 
 function retirar(){
+
     document.getElementById("screen_box").style.display="none";
     document.getElementById("screen1").style.display="none";
-    document.getElementById("screen3").style.display="block";
-    document.getElementById("screen2").style.display="none";
+    document.getElementById("screen3").style.display="none";
+    document.getElementById("screen4").style.display="none";
+    document.getElementById("screen5").style.display="none";
+    document.getElementById("screen6").style.display="none";
+    document.getElementById("screen2").style.display="block";
+
 } 
 
 function retirasoles(){
+
     document.getElementById("screen_box").style.display="none";
     document.getElementById("screen1").style.display="none";
     document.getElementById("screen2").style.display="none";
+    document.getElementById("screen4").style.display="none";
+    document.getElementById("screen5").style.display="none";
+    document.getElementById("screen6").style.display="none";
     document.getElementById("screen3").style.display="block";
+
 }
+
+function rotromonto(){
+    document.getElementById("screen_box").style.display="none";
+    document.getElementById("screen1").style.display="none";
+    document.getElementById("screen2").style.display="none";
+    document.getElementById("screen3").style.display="none";
+    document.getElementById("screen5").style.display="none";
+    document.getElementById("screen6").style.display="none";
+    document.getElementById("screen4").style.display="block";
+
+
+
+
+}
+
+function retiro_mult_10(){
+
+    document.getElementById("screen_box").style.display="none";
+    document.getElementById("screen1").style.display="none";
+    document.getElementById("screen2").style.display="none";
+    document.getElementById("screen3").style.display="none";
+    document.getElementById("screen4").style.display="none";
+    document.getElementById("screen6").style.display="none";
+    document.getElementById("screen5").style.display="block";
+
+
+
+}
+
+function transaccion_procesada(){
+    document.getElementById("screen_box").style.display="none";
+    document.getElementById("screen1").style.display="none";
+    document.getElementById("screen2").style.display="none";
+    document.getElementById("screen3").style.display="none";
+    document.getElementById("screen4").style.display="none";
+    document.getElementById("screen5").style.display="none";
+    document.getElementById("screen6").style.display="block";
+}
+
+class Factorial{
+    constructor(saldo){
+        saldo=1000;
+        this.saldo=saldo;
+        // para hacer operaciones simpre se usa el this.numero
+    };
+
+    operacion(){
+        var saldo_restante=this.saldo-document.getElementById("ingresa_monto").value;
+        return (saldo_restante);
+    };
+};
+
+function calcular() {
+    var res=document.getElementById("saldo");
+    //el numero que se ingresa se sustituira por el  valor de this.numero
+    var ingresar= new Factorial(document.getElementById('ingresa_monto').value);
+
+    res.value=ingresar.operacion();
+
+};
